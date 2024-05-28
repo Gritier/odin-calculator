@@ -16,31 +16,91 @@ body {
     align-items: center;
 }
 
+#container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 #calculator {
     border: 4px solid black;
-    border-radius: 24px;
     display: flex;
-    min-width: 400px;
-    min-height: 600px;
+    max-height: 600px;
+    max-width: 400px;
     flex-direction: column;
-    flex: 1 1 400px;
+    aspect-ratio: 2/3;
+    flex: 1 1 80%;
     align-items: center;
     background-color: #222222;
-    padding: 8px 16px;
+    padding: 8px 8px;
 }
 
 #display {
     background-color: azure;
-    height: 44px;
+    min-height: 100px;
     width: 100%;
     padding: 8px;
-    border-radius: 12px;
+    margin-bottom: 8px;
+    text-align: right;
 }
 
-button{
+#display > h3 {
+    color: #222222;
+    align-self: self-end;
+    font-size: 28px;
+}
+
+#display > p {
+    color: #7D7D7D;
+    align-self: self-end;
+    font-size: 28px;
+}
+
+#buttons {
+    display: flex;
+    flex: 1 1 auto;
+    width: 100%;
+}
+
+#number-buttons {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    margin-right: 8px;
+    gap: 8px;
+}
+
+.row {
+    display:flex;
+    flex: 1 1 auto;
+    gap: 8px;
+}
+
+.number {
+    flex: 2 2 auto;
+}
+
+#dot {
+    flex: 1 1 auto;
+}
+
+#operator-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    min-width:25%;
+}
+
+button {
     color: #222222;
     background-color: #f9f9f9;
     border: transparent;
-    border-radius: 4px;
+    flex: 1 1 auto;
+    font-size: 24px;
 }
 
+#operator-buttons > button {
+    background-color: #ff9d00;
+}
